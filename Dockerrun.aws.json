@@ -1,25 +1,25 @@
 {
     "AWSEBDockerrunVersion": 2,
     "containerDefinitions": [{
-        "mane": "client",
+        "name": "client",
         "image": "leewalterstx/multi-client",
         "hostname": "client",
         "essential": false,
         "memory": 128
     },{ 
-        "mane": "server",
+        "name": "server",
         "image": "leewalterstx/multi-server",
         "hostname": "api",
         "essential": false,
         "memory": 128
     },{ 
-        "mane": "worker",
+        "name": "worker",
         "image": "leewalterstx/multi-worker",
         "hostname": "worker",
         "essential": false,
         "memory": 128
     },{ 
-        "mane": "nginx",
+        "name": "nginx",
         "image": "leewalterstx/multi-nginx",
         "essential": true,
         "memory": 128,
