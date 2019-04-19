@@ -22,7 +22,7 @@
         "mane": "nginx",
         "image": "leewalterstx/multi-nginx",
         "essential": true,
-        "memory": 128
+        "memory": 128,
         "portMappings": [{
             "hostPort": 80,
             "containerPort": 80
