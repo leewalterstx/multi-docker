@@ -1,0 +1,28 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [{
+        "mane": "client",
+        "image": "leewalterstx/multi-client",
+        "hostname": "client",
+        "essential": false
+    },{ 
+        "mane": "server",
+        "image": "leewalterstx/multi-server",
+        "hostname": "api",
+        "essential": false
+    },{ 
+        "mane": "worker",
+        "image": "leewalterstx/multi-worker",
+        "hostname": "worker",
+        "essential": false
+    },{ 
+        "mane": "nginx",
+        "image": "leewalterstx/multi-nginx",
+        "essential": true,
+        "portMappings": [{
+            "hostPort": 80,
+            "containerPort": 80
+        }],
+        "links": ["client", "server"]
+    }]
+}
