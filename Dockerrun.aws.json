@@ -4,21 +4,25 @@
         "mane": "client",
         "image": "leewalterstx/multi-client",
         "hostname": "client",
-        "essential": false
+        "essential": false,
+        "memory": 128
     },{ 
         "mane": "server",
         "image": "leewalterstx/multi-server",
         "hostname": "api",
-        "essential": false
+        "essential": false,
+        "memory": 128
     },{ 
         "mane": "worker",
         "image": "leewalterstx/multi-worker",
         "hostname": "worker",
-        "essential": false
+        "essential": false,
+        "memory": 128
     },{ 
         "mane": "nginx",
         "image": "leewalterstx/multi-nginx",
         "essential": true,
+        "memory": 128
         "portMappings": [{
             "hostPort": 80,
             "containerPort": 80
